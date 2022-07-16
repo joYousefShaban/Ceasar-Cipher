@@ -7,5 +7,7 @@ Also, it will contain the following features:
  - Browse File
  - Allow symbols or not
  - introduce spaces in the cypher text or not 
+  
+Attacehed you will find the initial frontend of the website:
 
- ![Cipher.png](Images/Cipher.png)
+![Cipher.png](Figma/Cipher.png)

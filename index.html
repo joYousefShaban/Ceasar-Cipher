@@ -7,7 +7,7 @@
   <script src="script.js"></script>
 </head>
 
-<body>
+<body id="body">
   <div>
     <div class=e2_4>
       <div class=e7_59><span class="e7_15">Caesar Cipher</span>
@@ -23,8 +23,7 @@
       <div class=e8_8>
         <div class=e8_44>
           <div class="e8_18">
-            <p>A
-            <p>
+            <p>A</p>
           </div>
           <div class="e8_19">
             <p>B</p>
@@ -102,7 +101,7 @@
             <p>Z</p>
           </div>
         </div>
-        <div class=e8_80>
+        <div class=e8_80 id="cipherLetter">
           <div class="e8_81"></div>
           <div class="e8_82"></div>
           <div class="e8_83"></div>
@@ -132,9 +131,9 @@
         </div>
       </div>
       <div class="e8_7">
-        <input type="range" value="0" max="25">
+        <input type="range" value="0" max="25" id="slide" oninput="showVal(this)">
         <div class=e8_112>
-            <p>0</p>
+            <p id="slideNumber">0</p>
         </div>
       </div>
       <div class=e8_15>
@@ -145,10 +144,10 @@
         </div>
         <div class=e33_4>
           <div class="e8_11">
-            <textarea caption="Any suggestions">Please enter a text</textarea>
+            <textarea id="PlainText" placeholder="Please enter a text" oninput="PlainChange(this.value)"></textarea>
           </div>
           <div class="e8_13">
-            <textarea caption="Any suggestions">Please enter a text</textarea>
+            <textarea id="CipherText" placeholder="The cipher text will appear here"></textarea>
           </div>
           <div class="e8_14">
             <div class="e8_14_Container">

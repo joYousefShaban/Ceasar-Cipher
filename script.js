@@ -9,6 +9,12 @@ window.onload = function () {
     }
 };
 
+async function loadFile(file) {
+    let text = await file.text();
+    document.getElementById('output').textContent = text;
+  }
+
+  
 function showVal(element) {
     var slideNumber = document.getElementById("slideNumber");
     slideNumber.innerHTML = element.value;
@@ -21,17 +27,43 @@ function showVal(element) {
             temp -= 26;
         child.innerHTML = String.fromCharCode(temp);
     }
+    plainChange(document.getElementById("PlainText").value);
 }
 
-function PlainChange(PlainText){
-    var slideNumber = document.getElementById("slideNumber");
-    slideNumber=slideNumber.innerHTML;
-    var CipherText="";
-    for (var i = 0; i < PlainText.length; i++) {
-        var temp=PlainText.charAt(i).charCodeAt(0)+parseInt(slideNumber);
-        if (temp > 90)
-            temp -= 26;
-        CipherText+=String.fromCharCode(temp);
-      }
-    console.log(CipherText);
+function spaceChange() {
+    plainChange(document.getElementById("PlainText").value);
 }
+
+function symbolChange() {
+    plainChange(document.getElementById("PlainText").value);
+}
+
+function plainChange(plainString) {
+    var slideNumber = document.getElementById("slideNumber");
+    slideNumber = slideNumber.innerHTML;
+    var cipherText = "";
+    for (var i = 0; i < plainString.length; i++) {
+        var currentCharacter = plainString.charAt(i).charCodeAt(0);
+        if (currentCharacter >= 65 && currentCharacter <= 90) {
+            var newCharacter = currentCharacter + parseInt(slideNumber);
+            if (newCharacter > 90)
+                newCharacter -= 26;
+            cipherText += String.fromCharCode(newCharacter);
+        }
+        else if (currentCharacter >= 97 && currentCharacter <= 122) {
+            var newCharacter = currentCharacter + parseInt(slideNumber);
+            if (newCharacter > 122)
+                newCharacter -= 26;
+            cipherText += String.fromCharCode(newCharacter);
+        }
+        else if (document.getElementById('cb1').checked && currentCharacter == 32)
+            cipherText += String.fromCharCode(currentCharacter);
+        else if (document.getElementById('cb2').checked && currentCharacter != 32)
+            cipherText += String.fromCharCode(currentCharacter);
+    }
+    document.getElementById("CipherText").value = cipherText;
+    console.log("hi");
+}
+// function temp() {
+//     console.log(document.getElementById('uploadedFile').value);
+// }

@@ -793,7 +793,7 @@ body {
 
 .e8_14_Container{
 	position: relative;
-	left: 24px;
+	margin-left: 24px;
     bottom: 0px;
 	top: 50px;
 	width: 230px;
@@ -815,7 +815,7 @@ input[type="radio"] {
 	z-index: -1;
 }
 
-label {
+.cb_lb {
 	position: relative;
 	display: inline-block;
 	line-height: 1.2em;
@@ -825,8 +825,8 @@ label {
 	font-weight: bold;
 }
 
-label::before,
-label::after {
+.cb_lb::before,
+.cb_lb::after {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -835,14 +835,14 @@ label::after {
 	height: 27px;
 }
 
-label::before {
+.cb_lb::before {
 	content: " ";
 	border: 2px solid #bdc3c7;
 	border-radius: 20%;
 }
 
 /* Checkbox */
-input[type="checkbox"]+label::after {
+input[type="checkbox"]+.cb_lb::after {
 	content: "\2714";
 	color: #2c3e50;
 	line-height: 1.5;
@@ -851,22 +851,22 @@ input[type="checkbox"]+label::after {
 }
 
 /* :checked */
-input[type="checkbox"]:checked+label::before,
-input[type="radio"]:checked+label::before {
+input[type="checkbox"]:checked+.cb_lb::before,
+input[type="radio"]:checked+.cb_lb::before {
 	background: #fff;
 	border-color: #fff;
 }
 
-input[type="checkbox"]+label::after,
-input[type=radio]+label::after {
+input[type="checkbox"]+.cb_lb::after,
+input[type=radio]+.cb_lb::after {
 	-webkit-transform: scale(0);
 	-ms-transform: scale(0);
 	-o-transform: scale(0);
 	transform: scale(0);
 }
 
-input[type="checkbox"]:checked+label::after,
-input[type=radio]:checked+label::after {
+input[type="checkbox"]:checked+.cb_lb::after,
+input[type=radio]:checked+.cb_lb::after {
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
@@ -874,8 +874,8 @@ input[type=radio]:checked+label::after {
 }
 
 /* Transition */
-label::before,
-label::after {
+.cb_lb::before,
+.cb_lb::after {
 	-webkit-transition: .25s all ease;
 	-o-transition: .25s all ease;
 	transition: .25s all ease;
@@ -916,18 +916,20 @@ label::after {
 	margin-top: -3.5%;
 }
 
-.e8_110 {
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    cursor: pointer;
 	color: rgba(0, 0, 0, 1);
-	width: 135px;
-	height: 28px;
-	position: absolute;
-	left: 46px;
-	top: 9px;
+	position: relative;
+	top:9px;
+	padding-left:50.82px;
+	padding-right:50.82px;
+	padding-bottom:9.5px;
+	padding-top:9.5px;
 	font-family: Arial;
 	text-align: center;
 	font-size: 24px;
 	letter-spacing: 0;
 }
-/* input[type=file] {
-	display: none;
-  } */

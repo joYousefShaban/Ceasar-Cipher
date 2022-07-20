@@ -62,8 +62,19 @@ function plainChange(plainString) {
             cipherText += String.fromCharCode(currentCharacter);
     }
     document.getElementById("CipherText").value = cipherText;
-    console.log("hi");
 }
-// function temp() {
-//     console.log(document.getElementById('uploadedFile').value);
-// }
+
+  function readFile(file) {
+    var textFile = file.files[0];
+    if (textFile) {
+        var reader = new FileReader();
+        reader.readAsText(textFile, "UTF-8");
+        reader.onload = function (evt) {
+            document.getElementById("PlainText").value = evt.target.result;
+            document.getElementById("PlainText").oninput();
+        }
+        reader.onerror = function (evt) {
+            alert("Error");
+        }
+    }
+    }

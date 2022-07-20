@@ -151,20 +151,16 @@
           </div>
           <div class="e8_14">
             <div class="e8_14_Container">
-              <input type="checkbox" name="cb1" id="cb1" class="chk1" onclick="spaceChange(this)" checked><label
-                for="cb1">Include Spaces</label><br><br><br>
-              <input type="checkbox" name="cb2" id="cb2" class="chk2" onclick="symbolChange(this)" checked><label
-                for="cb2">Include Symbols</label>
+              <input type="checkbox" name="cb1" id="cb1" class="chk1" onclick="spaceChange(this)" checked>
+              <label class="cb_lb" for="cb1">Include Spaces</label>
+              <br><br><br>
+              <input type="checkbox" name="cb2" id="cb2" class="chk2" onclick="symbolChange(this)" checked>
+              <label class="cb_lb" for="cb2">Include Symbols</label>
               <div class=e8_111>
-                <span class="e8_110"><span>Browse File</span>
-                  <!-- <form method="GET" action="">
-                    <label>
-                      Browse File
-                      <input type="file" id="uploadedFile" onchange="temp()"
-                        accept=".txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-                    </label>
-                  </form> -->
-                </span>
+                  <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i> Browse File
+                  </label>
+                  <input id="file-upload" type="file" onchange="readFile(this)"/>
               </div>
             </div>
           </div>
@@ -174,5 +170,4 @@
   </div>
   </div>
 </body>
-
 </html>

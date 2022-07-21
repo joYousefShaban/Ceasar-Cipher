@@ -11,6 +11,6 @@ Also, it will contain the following features:
 
 Attacehed you will find the initial frontend of the website:
 
-![Cipher.gif](Images/Cipher.gif)
+![preview.png](Images/Cipher.gif)
 
 https://potaton240hzz.github.io/Ceasar-Cipher/

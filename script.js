@@ -58,7 +58,7 @@ function plainChange(plainString) {
         }
         else if (document.getElementById('cb1').checked && currentCharacter == 32)
             cipherText += String.fromCharCode(currentCharacter);
-        else if (document.getElementById('cb2').checked && currentCharacter != 32)
+        else if (document.getElementById('cb2').checked && currentCharacter != 32 || currentCharacter == 10)
             cipherText += String.fromCharCode(currentCharacter);
     }
     document.getElementById("CipherText").value = cipherText;

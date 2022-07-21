@@ -1,0 +1,7 @@
+This text has just been imported!
+
+Ciphers, also called encryption algorithms, are systems for encrypting and decrypting data. A cipher converts the original message, called plaintext, into ciphertext using a key to determine how it is done.
+
+Ciphers are generally categorized according to how they work and by how their key is used for encryption and decryption. Block ciphers accumulate symbols in a message of a fixed size (the block), and stream ciphers work on a continuous stream of symbols. When a cipher uses the same key for encryption and decryption, they are known as symmetric key algorithms or ciphers. Asymmetric key algorithms or ciphers use a different key for encryption/decryption.
+
+Ciphers can be complex algorithms or simple ones. A common cipher, ROT13 (or ROT-13), is a basic letter substitution cipher, shorthand for “rotate by 13 places” in the alphabet. In a message, ROT13 replaces each letter of the alphabet with the letter that is thirteen places ahead of it.

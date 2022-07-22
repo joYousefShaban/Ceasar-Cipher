@@ -1,6 +1,6 @@
 # Ceasar Cipher
 
-This assignment was project was a personal project that was made in the third year of my bachelor's program at Hashemite University.
+This project was a personal project that was made in the third year of my bachelor's program at Hashemite University.
 
 In which, I decided to make a website that encrypts cyphers.
 Also, it will contain the following features:

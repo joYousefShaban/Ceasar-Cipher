@@ -9,7 +9,7 @@ Also, it will contain the following features:
  - introduce spaces in the cypher text or not
 
 
-Attacehed you will find the initial frontend of the website:
+Attacehed you will find the website:
 
 ![preview.png](Images/Cipher.gif)
 
